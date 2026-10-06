@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+$break-point_sp: 896px;
+$font-color: #24292E;
+$font-size_large: 24px;
+$font-size_middle: 14px;
+$font-size_small: 12px;
+
+@mixin media-sp($bp) {
+    @media screen and (max-width: $bp){
+        @content;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+    color: $font-color;
+}
+
+h1, h2, h3 {
+    font-size: $font-size_large;
+}
+
+p {
+    font-size: $font-size_middle;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    margin-bottom: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: $font-size_large;
+}
+
+.main-visual {
+    margin-bottom: 80px;
+
+    &__container {
+        position: relative;
+        padding: 0;
+        height: 100vh;
+        background-image: url(../img/mainvisual.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        img {
+            width: 120px;
+        }
+    }
+}
+
+.magazine {
+    &__text-inner {
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__image-list {
+        display: flex;
+    }
+
+    &__archive {
+        margin-right: 24px;
+    }
+
+    &__flex-item {
+        width: 50%;
+        position: relative;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,50%);
+        width: 280px;
+        height: 120px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+
+        .inner-title , .inner-text {
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+    @include media-sp($break-point_sp){
+        &__image-list {
+            flex-direction: column;
+        }
+
+        &__flex-item {
+            width: 100%;
+            margin-bottom: 32px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+.fashion-and-style {
+    margin-bottom: 80px;
+
+    &__container {
+        background-image: url(../img/fashion.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+    }
+
+    &__text {
+        text-align: center;
+        padding-top: 64px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__link {
+        border: 1px solid $font-color;
+        font-size: $font-size_small;
+        padding: 16px 36px;
+    }
+}
+
+.catalog-and-antique {
+    background-color: #F5F5F5;
+    padding: 60px 0;
+    margin-bottom: 0;
+
+    &__section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+
+        & > * {
+            width: 48%;
+        }
+
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+
+    }
+
+    .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+    }
+
+    &__description p {
+            margin-bottom: 30px;
+    }
+
+    .antique__link {
+        border: 1px solid $font-color;
+        font-size: $font-size_small;
+        padding: 16px 36px;
+        display: block;
+        width:fit-content;
+        margin: 0 auto;
+        margin-top: 48px;
+    }
+
+    @include media-sp($break-point_sp){
+        &__section {
+        flex-direction: column;
+
+        &:nth-child(2){
+            flex-direction: column;
+        }
+
+            & > * {
+                width: 100%;
+            }
+
+            .section-title {
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.footer {
+        background-color: #333333;
+        margin-bottom: 0;
+
+    &__container {
+        display: flex;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        & > * {
+            width: calc(100%/3);
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 120px;
+        }
+    }
+
+    &__text-area {
+        color: #ffffff;
+
+        li {
+            list-style-position: inside;
+            list-style-type: "- ";
+            margin-bottom: 0.4em;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            display: inline;
+            font-size: $font-size_small;
+        }
+    }
+
+    &__second-text-area {
+        p {
+            line-height: 2.4em;
+        }
+    }
+
+    &__copyright {
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    @include media-sp($break-point_sp){
+        &__container {
+            flex-direction: column;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            & > * {
+                width: 100%;
+            }
+        }
+
+        &__logo {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        &__text-area {
+            margin-bottom: 32px;
+        }
+    }
+}
