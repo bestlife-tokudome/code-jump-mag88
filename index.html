@@ -5,42 +5,50 @@
     <title>Mag88</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section id="main-visual" class="main-visual wrapper">
-        <div class="main-visual__container container">
-            <h1><img class="main-visual__logo" src="img/logo.svg"></h1>
-            <img class="main-visual__image" src="img/mainvisual.jpg">
+    <section id="main-visual" class="main-visual">
+        <div class="main-visual__container">
+            <h1 class="main-visual__logo"><img src="img/logo.svg"></h1>
         </div>
     </section>
 
     <section class="magazine wrapper">
         <div class="magazine__container container">
-            <h2 class="magazine__section-title section-title">
-                A magazine, long article in a newspaper or magazine
-            </h2>
-            <p class="magazine__text section-text">
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
+            <div class="magazine__text-inner">
+                <h2 class="magazine__section-title section-title">
+                    A special, long article in a newspaper or magazine
+                </h2>
+                <p class="magazine__text section-text">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+            </div>
 
             <div class="magazine__image-list">
-                <div class="magazine__archive">
+                <div class="magazine__archive magazine__flex-item">
                     <a class="archive__link" href="#">
-                        <div class="magazine__text-container">
+                        <img class="archive__image magazine__image" src="img/magazine-archive.jpg">
+                        <div class="archive__text-container magazine__text-container">
                             <h3 class="inner-title">Archive</h3>
-                            <p class="inner-text">テキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="inner-text">
+                                テキストテキストテキストテキスト<br>
+                                テキストテキストテキスト
+                            </p>
                         </div>
-                        <img class="magazine__image" src="img/magazine-archive.jpg">
                     </a>
                 </div>
-                <div class="magazine__new">
+                <div class="magazine__new magazine__flex-item">
                     <a class="new__link" href="#">
-                        <div class="magazine__text-container">
+                        <img class="new__image magazine__image" src="img/magazine-new.jpg">
+                        <div class="new__text-container magazine__text-container">
                             <h3 class="inner-title">New</h3>
-                            <p class="inner-text">テキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="inner-text">
+                                テキストテキストテキストテキスト<br>
+                                テキストテキストテキスト
+                            </p>
                         </div>
-                        <img class="magazine__image" src="img/magazine-new.jpg">
                     </a>
                 </div>
             </div>
@@ -48,39 +56,41 @@
         </div>
     </section>
 
-    <section class="fashion-and-style wrapper">
-        <div class="fishion-and-style__container container">
-            <div class="fishion-and-style__text">
+    <section class="fashion-and-style">
+        <div class="fashion-and-style__container">
+            <div class="fashion-and-style__text">
                 <h2 class="section-title">Fashion & Style</h2>
-                <p class="section-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <p class="section-text">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキスト
+                </p>
                 <a class="fashion-and-style__link" href="#">Read More</a>
             </div>
-            <img class="fashion-and-style__image" src="img/fashion.jpg">
         </div>
     </section>
 
-    <div class="row-reverse__wrapper wrapper">
+    <div class="catalog-and-antique wrapper">
         <div class="catalog-and-antique__container container">
-            <section class="catalog__inner-container">
-                <div class="catalog__text">
+            <section class="catalog catalog-and-antique__section">
+                <img class="catalog__image" src="img/catalog.jpg">
+                <div class="catalog__text catalog-and-antique__text">
                     <h2 class="section-title">Catalog</h2>
-                    <div class="catalog__description">
+                    <div class="catalog-and-antique__description">
                         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                     </div>
-                    <img class="catalog__image" src="img/catalog.jpg">
                 </div>
             </section>
-            <section class="antique__inner-container">
-                <div class="antique__text">
+            <section class="antique catalog-and-antique__section">
+                <img class="antique__image" src="img/antique.jpg">
+                <div class="antique__text catalog-and-antique__text">
                     <h2 class="section-title">Antique</h2>
-                    <div class="antique__description">
+                    <div class="catalog-and-antique__description">
                         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         <a class="antique__link" href="#">Read More</a>
                     </div>
-                    <img class="antique__image" src="img/antique.jpg">
                 </div>
             </section>
         </div>
@@ -94,11 +104,10 @@
             <div class="footer__first-text-area footer__text-area">
                 <h4 class="footer__section-title">タイトル</h4>
                 <ul class="footer__text-list">
-                    <li>テキストテキストテキスト</li>
-                    <li>テキストテキストテキスト</li>
-                    <li>テキストテキストテキスト</li>
-                    <li>テキストテキストテキスト</li>
-                    <li>テキストテキストテキスト</li>
+                    <li><P>テキストテキストテキスト</P></li>
+                    <li><P>テキストテキストテキスト</P></li>
+                    <li><P>テキストテキストテキスト</P></li>
+                    <li><P>テキストテキストテキスト</P></li>
                 </ul>
             </div>
             <div class="footer__second-text-area footer__text-area">
@@ -107,7 +116,9 @@
                     テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                 </p>
             </div>
-            <p class="copyright">&copy; Mag88</p>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; Mag88</p>
         </div>
     </footer>
 
